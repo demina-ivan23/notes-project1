@@ -1,0 +1,69 @@
+body{
+    background-color:   #252525;
+    height: 100vh;
+  }
+  .noteAdditionNavbar
+  {
+    display: flex;
+    justify-content: space-between;
+  }
+  .backButton{
+    background-color:  #393939;
+    border-radius: 30%;
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 1px;
+    
+  }
+  .visAndSaveBtns{
+    display: flex;
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+  .saveButton{
+    background-color:  #393939;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    margin-left: 10px;
+    
+  }
+  .visibilityButton{
+    background-color:  #393939;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+  }
+  .noteAdditionTitle{
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 2.2em;
+    background-color: #252525;
+    color: #9A9A9A;
+    border: none;
+    outline: none;
+    width: 85%;
+    
+  }
+  .addNote{
+    margin-top: 20px;
+    margin-left: 30px;
+
+  }
+  .addNoteTextarea{
+    background-color: #252525;
+    color: #9A9A9A;
+    border: none;
+    width: 85%;
+    height: 350px;
+    font-size: 1.2em;
+    outline: none;
+  }
+  

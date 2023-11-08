@@ -1,0 +1,70 @@
+body {
+  background-color: #252525;
+  height: 100vh;
+}
+
+.notesNavbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notesFooter {
+  position: fixed;
+  top: 90%;
+  right: 5%;
+}
+
+.addButton {
+  background-color: #222222;
+  border-radius: 100%;
+  border: none;
+}
+
+.searchButton {
+  background-color: #393939;
+  border-radius: 30%;
+  border: none;
+  padding-top: 6px;
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-bottom: 4px;
+  margin-right: 7px;
+}
+
+.infoButton {
+  background-color: #393939;
+  border-radius: 30%;
+  border: none;
+  padding-top: 6px;
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-bottom: 4px;
+}
+
+.heroText {
+  color: #fff;
+  font-size: 1.7em;
+  margin-top: 16px;
+  margin-left: 20px;
+}
+
+.navbarButtons {
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+.notesWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.firstNoteMotivation {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.notePlaceholder {
+  margin-top: 150px;
+}/*# sourceMappingURL=style.css.map */
