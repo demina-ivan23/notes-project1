@@ -31,7 +31,7 @@ body{
     align-items: center;
     padding: 0px 10px;
     margin-left: 10px;
-    
+    border: none;
   }
   .visibilityButton{
     background-color:  #393939;
@@ -40,6 +40,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 0px 10px;
+    border: none;
   }
   .noteAdditionTitle{
     margin-top: 20px;
@@ -55,7 +56,7 @@ body{
   .addNote{
     margin-top: 20px;
     margin-left: 30px;
-
+    
   }
   .addNoteTextarea{
     background-color: #252525;
@@ -65,5 +66,87 @@ body{
     height: 350px;
     font-size: 1.2em;
     outline: none;
+    resize: none;
   }
   
+  .hidden{
+    display: none;
+    overflow: 0;
+  }
+  #unsavedChangeAlert{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .unsavedAlertContent{
+    position: fixed;
+    top: 45%;
+    right: 18%;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+    padding-bottom: 40px;
+ border-radius: 7px;
+    background-color: #1b1b1b;
+  }
+  
+  .infoImgContainer{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  .unsavedAlertText{
+    font-size: 1.2em;
+  }
+  .unsavedAlertBtns{
+    margin-top: 15px;
+  }
+  .cancelExitButton{
+    margin-right: 10px;
+    background-color: green ;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+  }
+  .submitExitButton{
+    background-color: red;
+    padding: 5px  15px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-left: 15px;
+  }
+  #duplicationAlert{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .duplAlertContent{
+    position: fixed;
+    top: 40%;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+    padding-bottom: 40px;
+ border-radius: 7px;
+    background-color: #1b1b1b;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .okBtnContainer{
+    margin-top: 25px;
+  }
+  #okBtn{
+
+    background-color: rgb(67, 67, 242);
+    padding: 5px 20px;
+    border-radius: 5px;
+
+  }

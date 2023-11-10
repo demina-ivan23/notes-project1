@@ -15,12 +15,12 @@
 
 </div>
 <div class="visAndSaveBtns">
-    <buttnon class="visibilityButton">
+    <button class="visibilityButton">
         <img src="icons/visibility.png" alt="">
-    </buttnon>
-    <buttnon class="saveButton">
+    </button>
+    <button class="saveButton">
         <img src="icons/save.png" alt="">
-    </buttnon>
+    </button>
 </div>
 </div>
 <div class="noteAdditionWrapper">
@@ -29,10 +29,40 @@
 <input class="noteAdditionTitle" maxlength="25" type="text" placeholder="Title">
 
 <div class="addNote">
-    <textarea placeholder="Type your note here... " class="addNoteTextarea">
-               
-    </textarea>
+    <textarea placeholder="Type your note here... " class="addNoteTextarea"></textarea>     
+    
 </div>
-    <script src="script.js"></script>
+<div id="unsavedChangeAlert" class="hidden">
+    <div class="unsavedAlertContent">
+        <div class="infoImgContainer">
+            <img src="icons/info.png" alt="" class="infoImage">
+
+        </div>
+        <p class="unsavedAlertText">You have unsaved changes!</p>
+        <div class="unsavedAlertBtns">
+
+            <span class="cancelExitButton">Cancel</span>
+            <span class="submitExitButton">Exit</span>
+        </div>
+      
+    </div>
+  </div>
+  <div id="duplicationAlert" class="hidden">
+    <div class="duplAlertContent">
+        <div class="infoImgContainer">
+            <img src="icons/info.png" alt="" class="infoImage">
+
+        </div>
+        <p class="duplAlertText">
+            This note is alredy saved. If you want to create a note with such title, consider deleting the note that has the same title.  
+        </p>
+            <div class="okBtnContainer">
+               <span id="okBtn">
+                   OK
+               </span> 
+            </div> 
+    </div>
+  </div>
+    <script src="js/add-note-scr.js"></script>
 </body>
 </html>

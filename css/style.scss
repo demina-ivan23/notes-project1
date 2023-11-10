@@ -2,6 +2,10 @@ body{
   background-color:   #252525;
   height: 100vh;
 }
+.hidden{
+    display: none;
+    overflow: 0;
+}
 .notesNavbar{
 display: flex;
 justify-content: space-between;
@@ -49,6 +53,7 @@ justify-content: space-between;
 .notesWrapper{
     display: flex;
     justify-content: center;
+    flex-direction: column ;
     
 }
 .firstNoteMotivation{
@@ -60,4 +65,23 @@ justify-content: space-between;
 .notePlaceholder
 {
     margin-top: 150px;
+}
+.note{
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.noteTitle{
+    margin-left: 5px;    
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.noteText{
+    margin-left: 5px;
+    margin-bottom: 10px;
+
 }
