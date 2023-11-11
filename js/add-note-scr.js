@@ -35,23 +35,16 @@ document.querySelector('.cancelExitButton').addEventListener('click', () => {
 })
 // Adding a note
 document.querySelector('.saveButton').addEventListener('click', () => {
-let notesObject = JSON.parse(localStorage.getItem('notesObject')) || {};
-
-if (notesObject[noteTitleDraw] === undefined) {
-  notesObject[noteTitleDraw] = noteTextDraw;
-
-  localStorage.setItem('notesObject', JSON.stringify(notesObject));
-
+const notesObject = {
+  id: Date.now().toString() + Math.floor(Math.random() * 1000).toString(),
+  title: noteTitleDraw,
+  noteText: noteTextDraw
+};   
   
-  window.location.href = 'index.html';
-}
-
-    else{
-        document.querySelector('#duplicationAlert').classList.remove('hidden');
-        document.querySelector('#okBtn').addEventListener('click', () => {
-            document.querySelector('#duplicationAlert').classList.add('hidden');
-        });
-    }
-
-
-})
+let notesObjectArray = JSON.parse(localStorage.getItem('notesObjectArray')) || [];
+  
+notesObjectArray.push(notesObject);
+window.localStorage.setItem('notesObjectArray', JSON.stringify(notesObjectArray));
+console.log(notesObject.id);
+window.location.href = "index.html";
+});
