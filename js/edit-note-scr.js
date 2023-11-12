@@ -1,4 +1,6 @@
-const ObjectToChange = JSON.parse(localStorage.getItem('ObjectToChange'));
+import Note from './note.js';
+
+const ObjectToChange = Note.createNoteFromObject(JSON.parse(localStorage.getItem('ObjectToChange')));
 document.querySelector('.noteEditionTitle').value = ObjectToChange.title;
 document.querySelector('.editNoteTextarea').value = ObjectToChange.noteText;
 let noteTitleUnchanged = ObjectToChange.title;
@@ -33,11 +35,11 @@ document.querySelector('.backButton').addEventListener( 'click', () => {
 });
 
 document.querySelector('.saveButton').addEventListener('click', () => {
- const changedObject = {
-    id: ObjectToChange.id,
-    title: noteTitleChanged,
-    noteText: noteTextChanged
- };
+
+const changedObject = ObjectToChange;
+changedObject.setText(noteTextChanged);
+changedObject.setTitle(noteTitleChanged);     
+
  let notesObjectArray = JSON.parse(localStorage.getItem('notesObjectArray'));
  notesObjectArray = notesObjectArray.filter(note => note.id !== ObjectToChange.id);
  notesObjectArray.unshift(changedObject);

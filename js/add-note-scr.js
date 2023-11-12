@@ -1,3 +1,4 @@
+import Note from './note.js';
 const noteTitleDraww = document.querySelector('.noteAdditionTitle').value;
 const noteTextDraww = document.querySelector('.addNoteTextarea').value  
 let noteTitleDraw = noteTitleDraww;
@@ -35,16 +36,15 @@ document.querySelector('.cancelExitButton').addEventListener('click', () => {
 })
 // Adding a note
 document.querySelector('.saveButton').addEventListener('click', () => {
-const notesObject = {
-  id: Date.now().toString() + Math.floor(Math.random() * 1000).toString(),
-  title: noteTitleDraw,
-  noteText: noteTextDraw
-};   
+ 
+    const noteObject = new Note(noteTitleDraw, noteTextDraw)
   
 let notesObjectArray = JSON.parse(localStorage.getItem('notesObjectArray')) || [];
   
-notesObjectArray.push(notesObject);
+notesObjectArray.push(noteObject);
 window.localStorage.setItem('notesObjectArray', JSON.stringify(notesObjectArray));
-console.log(notesObject.id);
+console.log(noteObject.id);
 window.location.href = "index.html";
 });
+
+
