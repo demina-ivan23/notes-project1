@@ -119,4 +119,119 @@ body{
     font-size: 1.2em;
     margin-left: 15px;
   }
- 
+  #emptyFieldsAlert{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .emptyFieldsAlertContent{
+    position: fixed;
+    top: 45%;
+    right: 0%;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+    padding-bottom: 40px;
+ border-radius: 7px;
+    background-color: #1b1b1b;
+    margin: 0px 20px;
+  }
+  
+  .emptyFieldsAlertText{
+    font-size: 1.2em;
+  }
+  .emptyFieldsAlertOkBtnContainer{
+    margin-top: 25px;
+  }
+ .emptyFieldsAlertOkBtn{
+  background-color: rgb(11, 112, 255);
+  padding: 5px 20px;
+  border-radius: 5px;
+ }
+ #visAlert{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.visAlertContent{
+  position: fixed;
+  top: 45%;
+  right: 10%;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  padding: 30px;
+  padding-bottom: 40px;
+border-radius: 7px;
+  background-color: #1b1b1b;
+  margin: 0px 20px;
+}
+
+.visAlertText{
+  font-size: 1.2em;
+}
+.visAlertSubmitBtnsContainer{
+  margin-top: 25px;
+}
+.visAlertOkBtn{
+background-color: rgb(11, 112, 255);
+padding: 5px 20px;
+border-radius: 5px;
+}
+.visAlertCancelBtn{
+  background-color: rgb(249, 78, 78);
+padding: 5px 15px;
+margin-left: 20px;
+border-radius: 5px;
+}
+.visImgContainer{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.visAlertColorBtns{
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-around;
+
+}
+.redColor{
+ padding: 15px;
+ border-radius: 100%;
+ background-color: rgb(242, 86, 86);
+}
+.blueColor{
+  padding: 15px;
+ border-radius: 100%;
+  background-color: rgb(85, 85, 247); 
+}
+.yellowColor{
+  padding: 15px;
+ border-radius: 100%;
+  background-color: yellow;
+}
+.pinkColor{
+  padding: 15px;
+  border-radius: 100%;
+ background-color: pink; 
+}
+.greenColor{
+  padding: 15px;
+ border-radius: 100%;
+  background-color: rgb(27, 208, 27);
+}
+.purpleColor{
+  padding: 15px;
+  border-radius: 100%;
+ background-color: rgb(187, 11, 187);
+}
+.activeColor{
+  outline: auto;
+}

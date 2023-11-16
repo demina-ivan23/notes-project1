@@ -1,11 +1,13 @@
 export default class Note{
-    constructor(title, text){
+    constructor(title, text, color){
 this.title = title;
 this.noteText = text;
-this.id = this.generateId;
+this.noteColor = color;
+console.log(this.noteColor);
+this.id = this.generateId();
     }
     generateId(){
-       this.id = Date.now().toString() + Math.floor(Math.random() * 1000).toString()
+       return Date.now().toString() + Math.floor(Math.random() * 1000).toString()
     }
     setId(id){
         this.id = id
@@ -13,7 +15,9 @@ this.id = this.generateId;
 
     getHtml(){
         const note = document.createElement('div');
-        note.className = "note";
+        const colorClasses = this.noteColor ? this.noteColor : '';
+        note.classList = `note ${colorClasses}`;
+
         
         const title = document.createElement('div');
         title.className = "noteTitle";
@@ -39,11 +43,20 @@ this.id = this.generateId;
     setTitle(title){
 this.title = title;       
     }
+    setColor(color){
+        this.noteColor = color;
+    }
 
-    static createNoteFromObject({id, title, noteText}){
-        let result = new Note(title, noteText);
+    static createNoteFromObject({id, title, noteText, noteColor}){
+        let result = new Note(title, noteText, noteColor);
         result.setId(id);
         return result;
 
+    }
+    static deleteNoteById(id) {
+        let notes = JSON.parse(localStorage.getItem('notesObjectArray')) || [];
+       notes.filter(note => note.id !== id);
+       notes = notes.filter(note => note.id !== id);
+       localStorage.setItem('notesObjectArray', JSON.stringify(notes));
     }
 }

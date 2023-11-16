@@ -24,21 +24,63 @@ const showNotes = () => {
     showNotes();
 })();
 
-//Notes editing
 const notes = document.querySelectorAll('.note');
-for(let noteToListen of notes)
-noteToListen.addEventListener('click', (event) => {
-    const note = event.currentTarget;
+
+function editNote(note) {
     const noteId = note.querySelector('.noteId').innerText;
     const noteTitle = note.querySelector('.noteTitle').innerText;
     const noteText = note.querySelector('.noteText').innerText;
+    
     let noteObjToEdit = {
         id: noteId,
         title: noteTitle,
         noteText: noteText
-    }
-    window.localStorage.setItem('ObjectToChange', JSON.stringify(noteObjToEdit))
-     window.location.href = 'edit-note.html';
-});
+    };
+    
+    window.localStorage.setItem('ObjectToChange', JSON.stringify(noteObjToEdit));
+    window.location.href = 'edit-note.html';
+}
 
+function deleteNote(id) {
+   Note.deleteNoteById(id);
+}
+
+notes.forEach((noteToListen) => {
+    let notePressTimer;
+
+    noteToListen.addEventListener('touchstart', () => {
+        notePressTimer = setTimeout(() => {
+            noteToListen.classList.add('deleteCard');
+        }, 2500);
+    });
+
+    noteToListen.addEventListener('touchend', () => {
+        clearTimeout(notePressTimer);
+        noteToListen.addEventListener('click', () => {
+        if (noteToListen.classList.contains('deleteCard')) {
+            
+               document.querySelector('#deleteAlert').classList.remove('hidden');
+               document.querySelector('.cancelDelButton').addEventListener('click', () => {
+                location.reload();
+               });
+               document.querySelector('.submitDelButton').addEventListener('click' , () => {
+               let noteId = noteToListen.querySelector('.noteId').innerText;
+               deleteNote(noteId);
+               location.reload();
+               });
+
+            } else {
+                    
+                    editNote(noteToListen);
+                    
+            }
+        }); 
+
+    });
+    noteToListen.addEventListener('touchmove', () => {
+        clearTimeout(notePressTimer);
+        noteToListen.removeAttribute('data-touch-start');
+      });  
+     
+});
 

@@ -72,6 +72,7 @@ justify-content: space-between;
     margin: 5px;
     margin-left: 20px;
     margin-right: 20px;
+    min-height: 80px;
 }
 .noteTitle{
     margin-left: 5px;    
@@ -85,3 +86,82 @@ justify-content: space-between;
     margin-bottom: 10px;
 
 }
+.deleteCard{
+    background: url('/icons/delete.png') no-repeat center;
+    overflow: visible;
+    
+    background-color: rgb(246, 27, 27);
+    font-size: 0em;
+}
+#deleteAlert{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .delAlertContainer{
+    position: fixed;
+    top: 35%;
+    right: 14%;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+    padding-bottom: 40px;
+ border-radius: 7px;
+    background-color: #1b1b1b;
+  }
+  
+  .delImgContainer{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  .delAlertText{
+    font-size: 1.2em;
+  }
+  .delAlertBtns{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  .cancelDelButton{
+    margin-right: 10px;
+    background-color: green ;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+  }
+  .submitDelButton{
+    background-color: red;
+    padding: 5px  15px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-left: 15px;
+  }
+  .redColor{
+   
+    background-color: rgb(242, 86, 86);
+   }
+   .blueColor{
+   
+     background-color: rgb(85, 85, 247); 
+   }
+   .yellowColor{
+   
+     background-color: yellow;
+   }
+   .pinkColor{
+   
+    background-color: pink; 
+   }
+   .greenColor{
+  
+     background-color: rgb(27, 208, 27);
+   }
+   .purpleColor{
+   
+    background-color: rgb(187, 11, 187);
+   }
