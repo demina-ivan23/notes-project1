@@ -96,13 +96,6 @@ body {
   margin-bottom: 10px;
 }
 
-.deleteCard {
-  background: url("/icons/delete.png") no-repeat center;
-  overflow: visible;
-  background-color: rgb(246, 27, 27);
-  font-size: 0em;
-}
-
 #deleteAlert {
   position: fixed;
   top: 0;
@@ -179,4 +172,54 @@ body {
 
 .purpleColor {
   background-color: rgb(187, 11, 187);
+}
+
+.deleteCard {
+  background: url("/icons/delete.png") no-repeat center;
+  overflow: visible;
+  background-color: rgb(246, 27, 27);
+  font-size: 0em;
+}
+
+#searchAlert {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.searchAlertContents {
+  display: flex;
+  justify-content: center;
+  background-color: #393939;
+  border-radius: 50px;
+  margin: 20px;
+  height: 35px;
+}
+
+.searchAlertInput {
+  background-color: #393939;
+  color: #a6a6a6;
+  border: none;
+  width: 80%;
+  outline: none;
+  height: 30px;
+  border-radius: 50px;
+  font-size: 1em;
+}
+
+.searchAlertImageContainer {
+  display: flex;
+  align-items: center;
+}
+
+.matchNotFoundContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  justify-content: center;
+  margin-top: 70px;
 }/*# sourceMappingURL=style.css.map */
