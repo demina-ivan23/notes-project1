@@ -135,11 +135,22 @@ const renderNotes = (searchQuery) => {
         
         
     };
+    renderNotes('');
     const searchInput = document.querySelector('.searchAlertInput');
     searchInput.addEventListener('input', () => {
         const searchQuery = searchInput.value.trim();
         renderNotes(searchQuery);
+        let noteElementsContainer = document.querySelector('.notesContainerForSearch');
+        let noteElements = noteElementsContainer.querySelectorAll('.note');
+        console.log(noteElements);
+        noteElements.forEach((noteElement) => {
+         console.log(noteElement);
+          noteElement.addEventListener('click', () => {
+          editNote(noteElement);
+          });
+        });
     });
+    renderNotes('');
     let noteElementsContainer = document.querySelector('.notesContainerForSearch');
     let noteElements = noteElementsContainer.querySelectorAll('.note');
     console.log(noteElements);
