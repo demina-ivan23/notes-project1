@@ -1,0 +1,1 @@
+I want to mention that i took the idea for the design from figma.com, and the link to it is the following: https://www.figma.com/file/Xw7UJc5UA9nVUb9McswMXX/Notes-App-UI-(Community)?type=design&t=8rMChCFl6qCd2q1Z-6 . Logic of the app and the rest of the stuff is made by me.
