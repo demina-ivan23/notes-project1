@@ -6,7 +6,7 @@ document.querySelector('.addButton').addEventListener('click', () => {
 });
 // Showing notes
 const showNotes = () => {
-
+ 
     let notesObjectArray = JSON.parse(window.localStorage.getItem('notesObjectArray')) || [];
     if(notesObjectArray.length !== 0){
             document.querySelector('.notePlaceholder').classList.add('hidden');
