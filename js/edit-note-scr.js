@@ -19,7 +19,7 @@ document.querySelector('.backButton').addEventListener( 'click', () => {
 
     if(noteTextUnchanged === noteTextChanged && noteTitleUnchanged === noteTitleChanged){
         localStorage.setItem('ObjectToChange', ''); 
-        window.location.href = "notes-project1/index.html";
+        window.location.href = "index.html";
     }
     else{
         document.querySelector('#unsavedChangeAlert').classList.remove('hidden');
@@ -80,7 +80,7 @@ if(noteTextChanged === '' || noteTitleChanged === ''){
     notesObjectArray.unshift(changedObject);
     localStorage.setItem('notesObjectArray', JSON.stringify(notesObjectArray));
     localStorage.setItem('ObjectToChange', '');
-    window.location.href = 'notes-project1/index.html';
+    window.location.href = 'index.html';
 }
 })
 
