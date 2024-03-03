@@ -1,7 +1,7 @@
 import Note from './note.js';
 // Redirection to a notes creation page
 document.querySelector('.addButton').addEventListener('click', () => {
-    const redirectUrl = 'add-note.html';
+    const redirectUrl = 'notes-project1/add-note.html';
     window.location.href = redirectUrl;
 });
 // Showing notes
@@ -38,7 +38,7 @@ function editNote(note) {
     };
     
     window.localStorage.setItem('ObjectToChange', JSON.stringify(noteObjToEdit));
-    window.location.href = 'edit-note.html';
+    window.location.href = 'notes-project1/edit-note.html';
 }
 
 function deleteNote(id) {
