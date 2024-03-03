@@ -16,7 +16,7 @@ document.querySelector('.addNoteTextarea').addEventListener('input', (event) => 
 // 'Back' button functionality
 
 document.querySelector('.backButton').addEventListener('click', () => {
-    const redirectUrl = '/index.html';
+    const redirectUrl = 'index.html';
     if(noteTextDraw == "" && noteTitleDraw == ""){
         window.location.href = redirectUrl;    
     }
@@ -27,7 +27,7 @@ document.querySelector('.backButton').addEventListener('click', () => {
 });
 document.querySelector('.submitExitButton').addEventListener('click', () => {
     document.querySelector('#unsavedChangeAlert').classList.add('hidden');
-    const redirectUrl = '/index.html';
+    const redirectUrl = 'index.html';
     window.location.href = redirectUrl;    
 
 })
