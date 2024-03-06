@@ -2,4 +2,4 @@ I want to mention that i took the idea for the design from figma.com, and the li
 !IMPORTANT: This app works only in touch-screen mode. So when you open it in github pages, press f12 if you are working with a PC or just open developer tools by opening your browser options->more tools->developer tools and choose smartphone/tab icon in the upper left corner. Adjust the size of the screen as you need. If you are already using toush screen, then you should not encounter any problems and therefore you don't need to change anything. 
 Have a nice day!
 
-P.S.: to delete a note, hold your touch on it for a few seconds (works only in touch screen mode!).
+P.S.: to delete a note, hold your touch on it for a few seconds (works only in touch screen mode!), and then touch it again.
